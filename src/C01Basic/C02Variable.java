@@ -82,6 +82,7 @@ public class C02Variable {
 //            //null을 대상으로 isEmpty(), length()를 물어봄 NullPointerException
 //        }
 
+//        분기시 자주 사용
 //        boolean형 : true or false
 //        boolean b1 = true;
 
@@ -118,7 +119,27 @@ public class C02Variable {
 ////        예시)문자비교를 위한 묵시적 타입변환
 //        System.out.println('a' > 'b');
 
-//        문제)알파벳 소문자 개수 세기
+//        문제)알파벳 소문자, 대문자 개수 세기
+        String st1 = "01abcd123AZ한글123";
+        int cnt =0;
+        for (int i=0;i<st1.length();i++){
+            char ch = st1.charAt(i);
+            if(('a'<=ch && ch<='z') || ('A'<=ch &&ch<='Z')){
+                cnt++;
+            }
+        }
+        System.out.println(cnt);
+
+//          변수와 상수
+//          변수 : 재할당 가능, 재선언은 불가능
+        int a1 = 10;
+        a1 = 20;
+//        int a1 = 30;
+
+//          상수 : 값의 재할당 불가능. 정해진값(고정된값)을 사용시 상수 활용.
+        final double PI = 3.14;
+//        PI = 3.14;
+
     }
 
 
