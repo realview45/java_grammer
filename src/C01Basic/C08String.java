@@ -162,7 +162,7 @@ public class C08String {
 //            sb.append("\n");//\n은 줄바꿈을 의미
 //        }
 //        sb.insert(0, "C++");//문자열 중간에 insert하는 것은 성능저하를 발생 쓰면안됨
-//        sb.deleteCharAt(sb.length()-1);//마지막 index를 삭제하는 것 외에는 성는저하 발생
+//        sb.deleteCharAt(sb.length()-1);//마지막 index를 삭제하는 것 외에는 성능저하 발생
 //        result = sb.toString();
 //        System.out.println(result);
 
