@@ -102,16 +102,41 @@ public class C11Map {
 //        list를 정렬한다. 0번째 값 출력.
 
 
-//        TreeMap : key를 정렬(오름차순)하여 map을 저장((꽤나 유용)
-//        Map<String, Integer> myMap = new TreeMap<>();
-        Map<String, Integer> myMap = new TreeMap<>(Comparator.reverseOrder());
-        myMap.put("hello5", 1);
-        myMap.put("hello4", 2);
-        myMap.put("hello3", 3);
-        myMap.put("hello2", 4);
-        myMap.put("hello1", 5);
-        System.out.println(myMap);
+////        TreeMap : key를 정렬(오름차순)하여 map을 저장((꽤나 유용)
+////        Map<String, Integer> myMap = new TreeMap<>();
+//        Map<String, Integer> myMap = new TreeMap<>(Comparator.reverseOrder());
+//        myMap.put("hello5", 1);
+//        myMap.put("hello4", 2);
+//        myMap.put("hello3", 3);
+//        myMap.put("hello2", 4);
+//        myMap.put("hello1", 5);
+//        System.out.println(myMap);
 
 //        백준 : 파일정리 집합과 맵(맵셋문제 많이 풀어보기)
+
+////        LinkedHashMap : 데이터의 삽입순서 보장(입력시간순 정렬)
+//        Map<String, Integer> myMap = new LinkedHashMap<>();
+//        myMap.put("hello5", 1);
+//        myMap.put("hello4", 2);
+//        myMap.put("hello3", 3);
+//        myMap.put("hello2", 4);
+//        myMap.put("hello1", 5);
+//        for(String a : myMap.keySet()){
+//            System.out.println(a + " " + myMap.get(a));
+//        }
+
+//        iterator를 활용한 출력(중요X)
+        Map<String,Integer> myMap = new HashMap<>();
+        myMap.put("야구",2);
+        myMap.put("축구",3);
+        myMap.put("농구",2);
+        Iterator<String> iters = myMap.keySet().iterator();
+////        next메서드는 데이터를 하나씩 소모시키면서 값을 반환
+//        System.out.println(iters.next());
+////        hasNext메서드는 iterator안에 그 다음값이 있는지 없는지 boolean값 리턴(자주사용X)
+//        System.out.println(iters.hasNext());
+        while(iters.hasNext()){
+            System.out.println(iters.next());
+        }
     }
 }
