@@ -110,20 +110,21 @@ public class C10List {
 //            myList.add(new ArrayList<>());
 //        }
 
-////        [[1,2,3],[4,5,6],[7,8,9], ..., [58,59,60]]
-//        List<List<Integer>> myList = new ArrayList<>();
-//        for (int i = 0; i < 20; i++) {
-//            myList.add(new ArrayList<>());
-//        }
-//        int cnt = 1;
-//        for (int i = 0; i < 20; i++) {
-//            for (int j = 0; j < 3; j++) {
-//                myList.get(i).add(cnt);
-//                cnt++;
-//            }
-//        }
-//        System.out.println(myList);
-
+//        [[1,2,3],[4,5,6],[7,8,9], ..., [58,59,60]]
+        List<List<Integer>> myList = new ArrayList<>();
+        for (int i = 0; i < 20; i++) {
+            myList.add(new ArrayList<>());
+        }
+        int cnt = 1;
+        for (int i = 0; i < 20; i++) {
+            for (int j = 0; j < 3; j++) {
+                myList.get(i).add(cnt);
+                cnt++;
+            }
+        }
+        System.out.println(myList);
+        String str;
+        
 //        List<List<Integer>> myList = new ArrayList<>();
 //        int cnt = 1;
 //        for (int i = 0; i < 20; i++) {

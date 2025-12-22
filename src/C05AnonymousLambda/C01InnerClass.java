@@ -4,7 +4,7 @@ package C05AnonymousLambda;
 public class C01InnerClass {
     public static void main(String[] args) {
 //        static내부클래스를 활용한 객체 생성
-        Member.MemberInner mi = new Member.MemberInner(20);
+        Member.MemberInner mi = new Member.MemberInner(20);//Member하고 아무상관없는 MemberInner의 객체다 딱히 안해도됨
         System.out.println(mi.getB());
     }
 }

@@ -15,7 +15,7 @@ public class C02AnonymousClass {
 //        aa.eat();
 //
 ////        구현체가 없는 추상클래스 또는 인터페이스는 익명객체로 생성.
-//        Animal1 a1 = new Animal1() {
+//        Animal1 a1 = new Animal1() {//왼쪽의 인터페이스를 오른쪽의 익명 내부클래스로 구현해 익명 객체를 만들었다.일회용 클래스, 객체
 //            @Override
 //            public void makeSound() {
 //
@@ -45,7 +45,7 @@ public class C02AnonymousClass {
 //        Animal2 a2_2 = () -> System.out.println("hello world1");
 //        a2_2.makeSound();
 
-////        매개변수가 있는 익명객체의 람다함수 생성
+////        매개변수가 있는 익명객체의 람다함수 생성 Animal3에 타입이 명시
 //        Animal3 a3_1 = (a,b,c) -> {
 //            return a + ", " + b + ", " + c;
 //        };

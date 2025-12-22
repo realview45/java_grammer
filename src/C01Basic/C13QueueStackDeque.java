@@ -1,5 +1,7 @@
 package C01Basic;
 
+import C02MethodClass.C02MethodPractice;
+
 import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
 
@@ -146,6 +148,7 @@ public class C13QueueStackDeque {//(중요) 문제와 같이 풀기
         System.out.println(myDeque.pollLast());//20
         System.out.println(myDeque.pollFirst());//30
         System.out.println(myDeque.pollFirst());//10
+
 
     }
 }
