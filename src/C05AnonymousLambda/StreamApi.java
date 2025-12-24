@@ -101,21 +101,21 @@ public class StreamApi {//꼭 알아야함 java8이후의 문법
 //        Arrays.stream(stArr).forEach(a-> System.out.println(a));
 //        Arrays.stream(stArr).forEach(System.out::println);
 
-////        streamapi 실습)
-//        List<Student> myList = new ArrayList<>();
-//        myList.add(new Student("kim",20));
-//        myList.add(new Student("lee",40));
-//        myList.add(new Student("park",33));
-//        myList.add(new Student("choi",22));
-////        1)모든 객체의 평균나이(average합수)
-//        double avg = myList.stream().mapToInt(a->a.getAge()).average().getAsDouble();//이렇게하면안됨
-//        System.out.println(avg);
-////        2)정렬을 통한 가장 나이 어린 사람 찾기(sorted) + findFirst
-//        Student student = myList.stream().sorted((o1,o2)->o1.getAge()-o2.getAge()).findFirst().get();
-//        System.out.println(student);
-////        3)30대인 사람들만의 이름만 모아서 새로운 String배열에 담기(map활용)
-//        String[] nameStArr = myList.stream().filter(a->a.getAge()>=30&&a.getAge()<40).map(a->a.getName()).toArray(a->new String[a]);
-//        System.out.println(Arrays.toString(nameStArr));
+//        streamapi 실습)
+        List<Student> myList = new ArrayList<>();
+        myList.add(new Student("kim",20));
+        myList.add(new Student("lee",40));
+        myList.add(new Student("park",33));
+        myList.add(new Student("choi",22));
+//        1)모든 객체의 평균나이(average합수)
+        double avg = myList.stream().mapToInt(a->a.getAge()).average().getAsDouble();//이렇게하면안됨
+        System.out.println(avg);
+//        2)정렬을 통한 가장 나이 어린 사람 찾기(sorted) + findFirst
+        Student student = myList.stream().sorted((o1,o2)->o1.getAge()-o2.getAge()).findFirst().get();
+        System.out.println(student);
+//        3)30대인 사람들만의 이름만 모아서 새로운 String배열에 담기(map활용)
+        String[] nameStArr = myList.stream().filter(a->a.getAge()>=30&&a.getAge()<40).map(a->a.getName()).toArray(a->new String[a]);
+        System.out.println(Arrays.toString(nameStArr));
 
 ////        Optional객체 : 특정객체에 값이 없을지도(null) 모른다는 것을 명시적으로 표현한 객체 (중요)
 //        String st1 = null;//?있는지 없는지 모를때
@@ -178,23 +178,38 @@ public class StreamApi {//꼭 알아야함 java8이후의 문법
 //        double value2 = studentList.stream().mapToInt(a->a.getAge()).average().orElseThrow(()-> new NoSuchElementException("값이 없습니다."));
 //        System.out.println(value2);
 
-//        optional객체 처리 실습2)
-        List<Student> studentList = new ArrayList<>();
-        studentList.add(new Student("kim",20));
-        studentList.add(new Student("lee",40));
-        studentList.add(new Student("park",33));
-        studentList.add(new Student("choi",22));
+////        optional객체 처리 실습2)
+//        List<Student> studentList = new ArrayList<>();
+//        studentList.add(new Student("kim",20));
+//        studentList.add(new Student("lee",40));
+//        studentList.add(new Student("park",33));
+//        studentList.add(new Student("choi",22));
+//
+//        System.out.println("조회하고자 하는 student의 index번호를 입력해주세요");
+//        Scanner sc = new Scanner(System.in);
+//        int number = Integer.parseInt(sc.nextLine());
+//        Optional<Student> s1; //Optional클래스로 wrapping
+//        if(studentList.size() <= number || number < 0){
+//            s1 = Optional.empty(); //객체 생성
+//        }else {
+//            s1 = Optional.of(studentList.get(number));//((옵셔널에는 아무거나 올수 있나보다))
+//        }
+//        System.out.println(s1.orElseThrow(()-> new NoSuchElementException("없는 회원입니다.")));
 
-        System.out.println("조회하고자 하는 student의 index번호를 입력해주세요");
+        List<Student> list = new ArrayList<>();
+        list.add(new Student("kim",20));
+        list.add(new Student("lee", 30));
+        list.add(new Student("park",33));
+        list.add(new Student("choi",22));
+
         Scanner sc = new Scanner(System.in);
-        int number = Integer.parseInt(sc.nextLine());
-        Optional<Student> s1;
-        if(studentList.size() <= number || number < 0){
+        int num = Integer.parseInt(sc.nextLine());
+        Optional<Student>s1;
+        if(list.size()<=num||num<0){
             s1 = Optional.empty();
         }else {
-            s1 = Optional.of(studentList.get(number));//((옵셔널에는 아무거나 올수 있나보다))
+            s1= Optional.of(list.get(num));
         }
         System.out.println(s1.orElseThrow(()-> new NoSuchElementException("없는 회원입니다.")));
-
     }
 }

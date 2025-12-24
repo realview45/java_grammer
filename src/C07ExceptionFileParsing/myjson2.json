@@ -1,0 +1,18 @@
+[{
+  "id": 1,
+  "name" : "hong1",
+  "classNumber" : "1",
+  "city" : "seoul"
+},{
+  "id": 2,
+  "name" : "hong2",
+  "classNumber" : "2",
+  "city" : "pusan"
+},
+  {
+    "id": 3,
+    "name" : "hong3",
+    "classNumber" : "2",
+    "city" : "seoul"
+  }
+]

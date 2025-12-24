@@ -1,6 +1,7 @@
 package C04Interface.BankProgram;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 /*
         <계좌개설 및 입출금 서비스>
@@ -38,7 +39,7 @@ public class BankController {
                 String accountNumber = sc.nextLine();
                 System.out.print("가지고있는돈 : ");
                 long balance = Long.parseLong(sc.nextLine());
-                BankAccount ba=new BankAccount(name, accountNumber, balance);
+                BankAccount ba = new BankAccount(name, accountNumber, balance);
                 accountList.add(ba);
                 bs.inquiry(ba);
             } else if (serviceNumber.equals("2")) {
