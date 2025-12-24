@@ -5,8 +5,8 @@ import java.util.*;
 public class C03ComparatorComparable {
     public static void main(String[] args) {
 //        java에서는 비교를 위한 인터페이스가 대표적으로 2개 제공
-//        1. Comparator인터페이스 : 인터페이스내 compareTo메서드만 존재//쓸 줄 알아야함
-//        2. Comparable인터페이스 : 인터페이스내 compare메서드만 존재//안써도 됨
+//        1. Comparator인터페이스 : 인터페이스내 compare메서드만 존재//쓸 줄 알아야함
+//        2. Comparable인터페이스 : 인터페이스내 compareTo메서드만 존재//안써도 됨
         List<Integer> myList = new ArrayList<>();
         myList.add(20);
         myList.add(10);
@@ -47,6 +47,7 @@ public class C03ComparatorComparable {
             }
         });
         Set<String> treeSet = new TreeSet<>((o1, o2) -> o1.length()-o2.length());
+
 //
 //      백준 절대값 힙
         Queue<Integer> queue = new PriorityQueue<>((o1,o2)->{

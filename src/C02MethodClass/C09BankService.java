@@ -170,7 +170,9 @@ class BankAccount {
         a.balance += money;
         return true;
     }
+    public BankAccount(){
 
+    }
     public BankAccount(String name, String accountNumber, long balance) {
         staticId++;
         this.id = staticId;

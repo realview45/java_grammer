@@ -25,10 +25,8 @@ abstract class AbstractAnimal{
 //    abstract메서드는 메서드를 선언만하고 구현이 없는 메서드
 //    해당 클래스를 상속받는 클래스에서 abstract메서드 구현.
     abstract void makeSound2();
-
 }
 class AbstractDog extends AbstractAnimal{
-
 //    구현되지 않은 makeSound2를 구현.
     @Override
     void makeSound2() {

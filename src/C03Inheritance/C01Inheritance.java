@@ -2,7 +2,7 @@ package C03Inheritance;
 //상속 : 부모의 변수와 메서드를 자식클래스에서 물려받는 것. (extends 키워드사용)
 public class C01Inheritance extends Parents{//실전에서 많이사용
                                 //다중 상속 불가 부모클래스의 어떤메서드, 어떤변수를 물려받을지 모름
-                                //인터페이스는 다중 상속, 다중 구현이 가능
+                                //인터페이스는 (다중 상속)다중 구현이 가능
     int b = 20;
     public static void main(String[] args) {
         C01Inheritance c1 =new C01Inheritance();
